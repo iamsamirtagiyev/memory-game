@@ -145,6 +145,7 @@ svg {
 }
 
 button{
+    z-index: 1;
     font-size: 18px;
     border: none;
     outline: none;
