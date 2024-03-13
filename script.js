@@ -23,9 +23,9 @@ cardItems.forEach((element, index) => {
                     if(document.querySelectorAll('.match').length === new_cards.length){
                         modal.classList.add('open')
                         modalWrapper.classList.add('open')
-setTimeout(() => {
-window.location.reload()
-}, 1000)
+//setTimeout(() => {
+//window.location.reload()
+//}, 1000)
                     }
                 }
                 else {
