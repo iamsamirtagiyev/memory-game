@@ -2,13 +2,11 @@ const cardBox = document.querySelector('.card-box')
 const cardItems = document.querySelectorAll('.card')
 const modal = document.querySelector('.modal')
 const modalWrapper = document.querySelector('.modal-wrapper')
-const btn = document.querySelector('button')
 
 let cards = ['image-1.jpg', 'image-2.jpeg', 'image-3.jpg', 'image-4.jpg', 'image-5.jpg', 'image-6.jpg', 'image-7.jpg', 'image-8.avif', 'image-1.jpg', 'image-2.jpeg', 'image-3.jpg', 'image-4.jpg', 'image-5.jpg', 'image-6.jpg', 'image-7.jpg', 'image-8.avif']
 
 let new_cards = cards.sort(() => (Math.random() > .5) ? 2 : -1)
 
-btn.onclick = () => window.location.reload()
 
 cardItems.forEach((element, index) => {
     element.querySelector('.back').style.backgroundImage = `url(./images/${new_cards[index]})`
@@ -25,6 +23,9 @@ cardItems.forEach((element, index) => {
                     if(document.querySelectorAll('.match').length === new_cards.length){
                         modal.classList.add('open')
                         modalWrapper.classList.add('open')
+setTimeout(() => {
+window.location.reload()
+}, 1000)
                     }
                 }
                 else {
